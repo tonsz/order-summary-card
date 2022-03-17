@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+$pblue: hsl(225, 100%, 94%);
+$brightblue: hsl(245, 75%, 52%);
+$pale: hsl(225, 100%, 98%);
+$desBlue: hsl(224, 23%, 55%);
+$darkBlue: hsl(223, 47%, 23%);
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: $pblue;
+    background-attachment: fixed;
+    background-position: 100% -70px;
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 20px 29px 0px rgba(101, 101, 196, 0.2);
+    img {
+        max-width: 100%;
+        border-radius: 20px 20px 0px 0px;  
+    }
+    .info {
+        text-align: center;
+        padding: 40px;       
+        .title {
+            h1 {
+                font-weight: 900;  
+                color: $darkBlue;
+            }
+            p {
+                font-size: 0.90rem;
+                margin-top: 20px;
+                color: $desBlue;
+            }
+
+        }                
+        .price {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px 20px 0px;
+            padding: 20px;
+            background-color: $pale;
+            border-radius: 15px;
+            .plan {
+                display: flex;
+                .cost {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: justify;
+                    margin-left: 20px;
+                    h4 {
+                        font-weight: 900;
+                    }
+                }   
+            
+            }
+
+            a {
+                align-self: center;
+                font-weight: 700;
+                color: hsl(245, 75%, 52%);
+                font-size: 0.85rem;
+                
+            }
+
+        }
+    
+        .button {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .pay {
+                
+                display: block;
+                width: 320px;
+                height: 50px;
+                padding: 10px;
+                margin-bottom: 20px;
+                background-color: $brightblue;
+                color: $pblue;
+                font-weight: 700;
+                font-size: 0.90rem;
+                text-decoration: none;
+                line-height: 30px;
+                border-radius: 12px;
+                box-shadow: 0px 15px 15px hsl(245, 100%, 90%);
+            }
+            
+            .cancel {
+                text-decoration: none;
+                font-weight: 900;
+                font-size: 0.90rem;
+                color: black;
+                opacity: 0.5;
+            
+               
+            }
+        }
+    }
+}
+
+.change:hover {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: .7;
+   
+}
+
+.pay:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.cancel:hover {
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+@media (max-width: 375px) {
+    body {
+        margin: 30px 20px 30px 20px;
+    }
+    
+}
